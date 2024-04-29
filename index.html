@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1">
+
+        <!--Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+        <title></title>
+        <style type="text/css">
+
+            /*====Font Styling====*/
+            body  {
+                  background-color: #F9E7E7;
+                  font-family: Comic Sans MS;
+                  font-size: 100%;
+                  margin: 2em 10px;
+                  line-height:1;
+                  }
+
+            #form {
+                  border: 5px dashed black;
+                  padding: ;
+                  }
+
+
+            h2 {
+                font-family: Comic Sans MS;
+               }
+
+        </style>
+    </head>
+
+    <body>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <img src="https://static.vecteezy.com/system/resources/previews/024/822/725/original/cute-cartoon-robot-on-transparent-background-ai-generated-digital-illustration-png.png" alt="Robot" width="600" height="600">
+        </div>
+
+        <div class="col-md-6">
+            <div class="rounded-2 p-4 m-5" id="form">
+                <div id="output-container" class="p-5 rounded-2 text-end">
+                    <p id="output-before" class="h6 m-0">&ZeroWidthSpace;</p>
+                    <p id="output" class="h2 m-0"></p>
+                </div>
+    
+                <div id="buttons">
+                    <div class="row p-2">
+                        <div class="col-md-6 p-1 form-floating">
+                            <input id="num1" class="form-control" type="number" value="5" placeholder="">
+                            <label for="num1">Value 1</label>
+                        </div>
+    
+                        <div class="col-md-6 p-1 form-floating">
+                            <input id="num2" class="form-control" type="number" value="5" placeholder="">
+                            <label for="num2">Value 2</label>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button id="multiplication-btn" class="h2 calc-btn rounded-5 w-100" type="button">Product of X and Y</button>
+                        </div>
+    
+                        <div class="col-md-6">
+                            <button id="exponent-btn" class="h2 calc-btn rounded-5 w-100" type="button">X being raised to Y</button>
+                        </div>
+    
+                        <div class="col-md-6">
+                            <button id="modulus-btn" class="h2 calc-btn rounded-5 w-100" type="button">The remainder of X and Y</button>
+                        </div>
+    
+                        <div class="col-md-6">
+                            <button id="equal-btn" class="h2 calc-btn rounded-5 w-100" type="button">Check if X and Y are equal</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function multiplication() {
+        const x = parseFloat(document.getElementById('num1').value);
+        const y = parseFloat(document.getElementById('num2').value);
+        document.getElementById('output').innerHTML = (x * y);
+        alert(document.getElementById('output').innerHTML);
+        }
+
+        document.getElementById('multiplication-btn').onclick = multiplication;
+
+
+        function exponent() {
+        const x = parseFloat(document.getElementById('num1').value);
+        const y = parseFloat(document.getElementById('num2').value);
+        document.getElementById('output').innerHTML = (x ** y);
+        alert(document.getElementById('output').innerHTML);
+        }
+
+        document.getElementById('exponent-btn').onclick = exponent;
+
+
+        function modulus() {
+        const x = parseFloat(document.getElementById('num1').value);
+        const y = parseFloat(document.getElementById('num2').value);
+        document.getElementById('output').innerHTML = (x % y);
+        alert(document.getElementById('output').innerHTML);
+        }
+
+        document.getElementById('modulus-btn').onclick = modulus;
+
+
+        function equal() {
+        const x = parseFloat(document.getElementById('num1').value);
+        const y = parseFloat(document.getElementById('num2').value);
+        document.getElementById('output').innerHTML = (x == y);
+        alert(document.getElementById('output').innerHTML);
+        }
+
+        document.getElementById('equal-btn').onclick = equal;
+
+    </script>
+    </body>
+
+</html>
